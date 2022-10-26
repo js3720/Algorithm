@@ -15,5 +15,5 @@ public class No_34 {
         }
         int[] answer = List.stream().mapToInt(Integer::intValue).toArray();
         return answer;
-    }
+    } // return Arrays.copyOfRange(numbers, num1, num2 + 1);
 }
