@@ -13,6 +13,7 @@ public class No_44 {
         for(int i=0; i<my_string.length(); i++){
             if( temp[i]!='a' && temp[i]!='e' && temp[i]!='i' && temp[i]!='o'&& temp[i]!='u' ) {
                 enswer.add(temp[i]);
+                System.out.println(temp[i]);
             }
         }
         return String.valueOf(enswer);
