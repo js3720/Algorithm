@@ -8,15 +8,12 @@ public class No_44 {
         System.out.println(j.solution("bus"));
     }
     public String solution(String my_string) {
-        List<Character> enswer = new ArrayList<>();
-        char[] temp = my_string.toCharArray();
-        for(int i=0; i<my_string.length(); i++){
-            if( temp[i]!='a' && temp[i]!='e' && temp[i]!='i' && temp[i]!='o'&& temp[i]!='u' ) {
-                enswer.add(temp[i]);
-                System.out.println(temp[i]);
-            }
-        }
-        return String.valueOf(enswer);
-    }
+        my_string= my_string.replace("a","");
+        my_string= my_string.replace("e","");
+        my_string= my_string.replace("i","");
+        my_string= my_string.replace("o","");
+        my_string= my_string.replace("u","");
+        return my_string;
+    } // my_string.replaceAll("[a,e,i,o,u]","");
 }
 

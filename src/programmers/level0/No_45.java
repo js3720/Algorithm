@@ -9,10 +9,12 @@ public class No_45 {
     public String solution(String my_string, int n) {
         char[] temp = my_string.toCharArray();
         char[] answer = new char[my_string.length()*n];
-        for(int i=0; i<my_string.length()*n; i+=n){
-            for(int j=0; j<n; j++){
-                answer[i+j]=temp[i];
-            }
+        int ans_idx=0;
+        for(int i=0 ; i<temp.length; i++){
+            for(int j=0; j<n; j++) {
+                answer[ans_idx] = temp[i];
+                ans_idx++;
+            }// answer+=my_string.charAt(i);
         }
         return new String(answer);
     }
