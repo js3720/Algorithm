@@ -1,5 +1,6 @@
 package programmers.level0;
-
+//https://school.programmers.co.kr/learn/courses/30/lessons/120864
+//숨어있는 숫자의 덧샘 (2)
 public class No_47 {
     public static void main(String[] args) {
         No_47 j = new No_47();
