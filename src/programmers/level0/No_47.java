@@ -4,7 +4,7 @@ package programmers.level0;
 public class No_47 {
     public static void main(String[] args) {
         No_47 j = new No_47();
-        System.out.println(j.solution("aAb1B2cC34oOp"));
+        System.out.println(j.solution("1a2b3c4d123"));
     }
     public int solution(String my_string) {
         int answer = 0;
@@ -12,14 +12,20 @@ public class No_47 {
         String tmp ="";
         char[] ch = my_string.toCharArray();
         for(int i=0; i<ch.length; i++){
-            if(ch[i]>48 && ch[i]<58) count++;
-            else if(count>0){
+            if(ch[i]>=48 && ch[i]<58) count++;
+            else if(count>0 ){
                 for(int j=count; j>0; j--){
                     tmp += ch[i-j];
                 }
                 answer += Integer.parseInt(tmp) ;
                 count=0;
                 tmp ="";
+            }
+            if(i==ch.length-1 && count>0){
+                for(int j=count-1; j>=0; j--){
+                    tmp += ch[i-j];
+                }
+                answer += Integer.parseInt(tmp) ;
             }
         }
         return answer;
