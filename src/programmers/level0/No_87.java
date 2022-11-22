@@ -10,9 +10,17 @@ public class No_87 {
         System.out.println(j.solution(id_pw,db));
     }
     public String solution(String[] id_pw, String[][] db) {
-        String answer ="";
+        String answer ="fail";
         for(int i=0; i<db.length; i++){
-            answer = db[i][0].equals(id_pw[0]) ? db[i][1].equals(id_pw[1]) ? "login" : "wrong pw" : "fail";
+            if(db[i][0].equals(id_pw[0])) {
+                if(db[i][1].equals(id_pw[1])) {
+                    answer = "login";
+                    break;
+                }
+                else if(!db[i][1].equals(id_pw[1])){
+                    answer = "wrong pw";
+                }
+            }
         }
         return answer;
     }
