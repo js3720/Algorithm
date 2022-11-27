@@ -1,6 +1,5 @@
 package programmers.level0;
 import java.util.*;
-
 //https://school.programmers.co.kr/learn/courses/30/lessons/120884
 //치킨 쿠폰
 public class No_90 {
