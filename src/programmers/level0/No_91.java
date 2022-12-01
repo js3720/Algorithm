@@ -7,10 +7,23 @@ public class No_91 {
         System.out.println(j.solution(40));
     }
     public int solution(int n) {
-        int count=0;
-        for(int i=0; i<=n; i++){
-            if(i%3==0 || i%10==3 || (i+count)%3==0 || (i+count)%10==3) count++;
+        int answer=1;
+        int count=1;
+        while(count<=n){
+            if(answer%3==0){
+                answer++;
+                continue;
+            }
+            if(String.valueOf(answer).contains("3")){
+                answer++;
+                continue;
+            }
+            if(count!=n){
+                count++;
+                answer++;
+            }
+            else count++;
         }
-        return n+count;
+        return answer;
     }
 }
