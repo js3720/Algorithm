@@ -14,5 +14,5 @@ public class No_05 {
             nList.add(str.charAt(str.length()-i)-'0');
         }
         return nList.stream().mapToInt(Integer::intValue).toArray();
-    }
+    }// return new StringBuilder().append(n).reverse().chars().map(Character::getNumericValue).toArray();
 }
